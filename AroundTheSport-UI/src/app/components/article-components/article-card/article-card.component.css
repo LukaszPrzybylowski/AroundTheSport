@@ -1,0 +1,9 @@
+.card{
+    border: 2px solid  #F3E09C;
+    max-height: 400px;
+    min-height: 400px;
+    background-color: black;
+}
+.btn{
+    background-color: #F3E09C;
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\EngineerWorld.Web.csproj": {}
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\EngineerWorld.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj",
         "projectName": "EngineerWorld.Identity",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\obj\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
               },
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
         "projectName": "EngineerWorld.Model",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\obj\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -151,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj",
         "projectName": "EngineerWorld.Repository",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\obj\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -180,8 +180,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
               }
             }
           }
@@ -237,14 +237,14 @@
         }
       }
     },
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\EngineerWorld.Services.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
         "projectName": "EngineerWorld.Services",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\obj\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -266,8 +266,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
               }
             }
           }
@@ -327,14 +327,14 @@
         }
       }
     },
-    "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\EngineerWorld.Web.csproj": {
+    "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\EngineerWorld.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
+        "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
         "projectName": "EngineerWorld.Web",
-        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
+        "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
         "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\obj\\",
+        "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -356,17 +356,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Identity\\EngineerWorld.Identity.csproj"
               },
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj"
               },
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Repository\\EngineerWorld.Repository.csproj"
               },
-              "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\EngineerWorld.Services.csproj": {
-                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Services\\EngineerWorld.Services.csproj"
+              "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj"
               }
             }
           }

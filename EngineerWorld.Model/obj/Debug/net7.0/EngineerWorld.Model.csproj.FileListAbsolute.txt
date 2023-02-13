@@ -34,3 +34,15 @@ C:\Users\lukas\OneDrive\Pulpit\EngineerWorld-Orig\EngineerWorld\EngineerWorld\En
 C:\Users\lukas\OneDrive\Pulpit\EngineerWorld-Orig\EngineerWorld\EngineerWorld\EngineerWorld.Model\obj\Debug\net7.0\refint\EngineerWorld.Model.dll
 C:\Users\lukas\OneDrive\Pulpit\EngineerWorld-Orig\EngineerWorld\EngineerWorld\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.pdb
 C:\Users\lukas\OneDrive\Pulpit\EngineerWorld-Orig\EngineerWorld\EngineerWorld\EngineerWorld.Model\obj\Debug\net7.0\ref\EngineerWorld.Model.dll
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\bin\Debug\net7.0\EngineerWorld.Model.deps.json
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\bin\Debug\net7.0\EngineerWorld.Model.dll
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\bin\Debug\net7.0\EngineerWorld.Model.pdb
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.csproj.AssemblyReference.cache
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.AssemblyInfoInputs.cache
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.AssemblyInfo.cs
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.csproj.CoreCompileInputs.cache
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.dll
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\refint\EngineerWorld.Model.dll
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\EngineerWorld.Model.pdb
+C:\Users\lukas\OneDrive\Pulpit\AroundTheSport-Pro\AroundTheSport\EngineerWorld.Model\obj\Debug\net7.0\ref\EngineerWorld.Model.dll

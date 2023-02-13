@@ -1,0 +1,15 @@
+.photo-album-empty{
+    min-height: cacl(100vh - 500px)
+}
+
+.slide-image{
+    display: block;
+    width: 100%;
+}
+
+.delete-confirmation {
+    display: inline-block;
+    background: white;
+    border-radius:10 px;
+    opacity: 0.8;
+}

@@ -1,0 +1,15 @@
+.not-found{
+    background: url(../../../assets/img/not-found-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+    min-height: 100vh
+}
+.text-notfound{
+    position: relative;
+    height: 1000px;
+    width: 1000px;
+    left: 20%;
+    top: 300px;
+}

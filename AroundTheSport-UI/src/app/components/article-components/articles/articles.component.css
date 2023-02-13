@@ -1,0 +1,15 @@
+.articles{
+    min-height: calc(100vh - 400px);
+}
+#background{
+    max-width: 100% !important;
+    min-height: 100vh;
+    background-color: black;
+    background-image: url(/assets/img/LogoFrame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.display-4{
+    color: #F3E09C;
+}

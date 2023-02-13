@@ -1,0 +1,12 @@
+.article-image{
+    border-radius: 5px;
+}
+
+.article-content{
+    white-space: pre-line;
+}
+
+.text-wrapper{
+    float: left;
+    margin: 0 0 1em 0;
+}

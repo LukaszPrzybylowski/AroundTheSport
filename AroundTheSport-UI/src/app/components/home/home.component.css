@@ -1,0 +1,28 @@
+#home-section{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    max-width: 100% !important;
+    min-height: 100vh;
+    left: 0;
+    border-top:1px solid #F3E09C;
+}
+
+.dark-form{
+    background-color: dark;
+}
+
+.home-inner{
+    position: relative;
+    left: 0;
+    top: 1%;
+}
+.card{
+    min-height: 300px;
+    min-width: 400px;
+    left: 20%;
+    top: 1%;
+    background-color: #F3E09C;
+}

@@ -1,0 +1,8 @@
+@media (min-width: 600px){
+    .navbar-expand-lg > .container {
+         max-width: 100% !important;
+    }}
+
+.navbar-nav > li > a {
+     color: #777;
+ }

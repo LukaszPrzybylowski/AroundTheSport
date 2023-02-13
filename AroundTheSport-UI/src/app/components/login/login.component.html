@@ -1,0 +1,67 @@
+<div class="container">
+    <div *ngIf="!accountService.isLoggedIn(); else hello_window">
+            <h2 class="text-light">Login</h2>
+            <p class="text-light">Get to your dashboard and start blogging</p>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                <div class="mb-3">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('username') && isTouched('username'),
+                                    'is-valid' : !hasErrors('username') && isTouched('username')}"
+                        class="form-control form-control-lg"
+                        formControlName="username"
+                        placeholder="Username">
+
+                    <div *ngIf="hasError('username', 'required')" class="invalid-feedback">
+                        Username is required
+                    </div>
+
+                    <div *ngIf="hasError('username', 'minlength') || hasError('username', 'maxlength')" 
+                        class="invalid-feedback">
+                        Must be between 5-20 characters
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <input
+                        type="password"
+                        [ngClass]="{'is-invalid' : hasErrors('password') && isTouched('password'),
+                                    'is-valid' : !hasErrors('password') && isTouched('password')}"
+                        class="form-control form-control-lg"
+                        formControlName="password"
+                        placeholder="Password">
+
+                    <div *ngIf="hasError('password', 'required')" class="invalid-feedback">
+                        Password is required
+                    </div>
+
+                    <div *ngIf="hasError('password', 'minlength') || hasError('password', 'maxlength')" 
+                        class="invalid-feedback">
+                        Must be between 10-50 characters
+                    </div>
+                </div>
+                <div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-lg text-dark"
+                        [disabled]="!loginForm.valid">Login</button>
+                    </div>
+                        <p class="p-4 align-self-end text-light">
+                            Don't have an account ?
+                        <button class="btn-dark text-light btn-link p-1" routerLink="/register">Create an account</button>
+                        </p>
+                </div>
+            </form>
+    </div>
+    <ng-template #hello_window class="col-lg-4 mt-5">
+    <div class="card center vard form">
+        <div class="card-body bg-black">
+            <video autoplay muted loop id="myVideo">
+                <source src="/assets/img/Hello1.mp4" type="video/mp4"/>
+                    </video>
+        </div>
+</div>
+</ng-template>
+</div>
+

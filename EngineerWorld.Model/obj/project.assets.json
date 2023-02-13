@@ -320,11 +320,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
       "projectName": "EngineerWorld.Model",
-      "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
+      "projectPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\EngineerWorld.Model.csproj",
       "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Model\\obj\\",
+      "outputPath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

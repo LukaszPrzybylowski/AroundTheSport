@@ -1,0 +1,168 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            
+            <h1 class="text-light">Don't Have An Account?</h1>
+            <p class="text-light">Just fill out the form and register</p>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('fullname') && isTouched('fullname'),
+                            'is-valid' : !hasErrors('fullname') && isTouched('fullname')}"
+                        class="form-control form-control-lg"
+                        formControlName="fullname"
+                        placeholder="Full Name*">
+
+                    <div *ngIf="hasError('fullname', 'required')" class="invalid-feedback">
+                        Full Name is required
+                    </div>
+
+                    <div *ngIf="hasError('fullname', 'minLenght') || hasError('fullname', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('lastname') && isTouched('lastname'),
+                            'is-valid' : !hasErrors('lastname') && isTouched('lastname')}"
+                        class="form-control form-control-lg"
+                        formControlName="lastname"
+                        placeholder="Last Name">
+
+                    <div *ngIf="hasError('lastname', 'minLenght') || hasError('lastname', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('company') && isTouched('company'),
+                            'is-valid' : !hasErrors('company') && isTouched('company')}"
+                        class="form-control form-control-lg"
+                        formControlName="company"
+                        placeholder="Company">
+
+                    <div *ngIf="hasError('company', 'minLenght') || hasError('company', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <form #f="ngForm" 
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('profession') && isTouched('profession'),
+                            'is-valid' : !hasErrors('profession') && isTouched('profession')}"
+                        class="form-control form-control-lg"
+                        formControlName="profession"
+                        placeholder="Profession*">
+                        <select name="profession" ngModel>
+                            <option value="" disabled>Choose a profession</option>>
+                            <option *ngFor="let profession of allProfessions" [ngValue]="profession">
+                                {{profession.prof}}
+                            </option>
+                        </select>
+                    </form>
+
+                    <div *ngIf="hasError('profession', 'required')" class="invalid-feedback">
+                        Profession is required
+                    </div>
+
+                    <div *ngIf="hasError('profession', 'minLenght') || hasError('profession', 'maxLenght')" class="invalid-feedback">
+                        Must be between 5-20 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('username') && isTouched('username'),
+                            'is-valid' : !hasErrors('username') && isTouched('username')}"
+                        class="form-control form-control-lg"
+                        formControlName="username"
+                        placeholder="Username*">
+
+                    <div *ngIf="hasError('username', 'required')" class="invalid-feedback">
+                        Username is required
+                    </div>
+
+                    <div *ngIf="hasError('username', 'minLenght') || hasError('username', 'maxLenght')" class="invalid-feedback">
+                        Must be between 5-20 characters
+                    </div>
+                </div>
+                
+
+                <div class="form-group mt-2">
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('email') && isTouched('email'),
+                            'is-valid' : !hasErrors('email') && isTouched('email')}"
+                        class="form-control form-control-lg"
+                        formControlName="email"
+                        placeholder="Email*">
+
+                    <div *ngIf="hasError('email', 'required')" class="invalid-feedback">
+                        Email is required
+                    </div>
+
+                    <div *ngIf="hasError('email', 'pattern')" class="invalid-feedback">
+                        Invalid email format
+                    </div>
+
+                    <div *ngIf="hasError('email', 'maxLenght')" class="invalid-feedback">
+                        Can be at most 30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <input
+                        type="password"
+                        [ngClass]="{'is-invalid' : hasErrors('password') && isTouched('password'),
+                            'is-valid' : !hasErrors('password') && isTouched('password')}"
+                        class="form-control form-control-lg"
+                        formControlName="password"
+                        placeholder="Password*">
+
+                    <div *ngIf="hasError('password', 'required')" class="invalid-feedback">
+                        Password is required
+                    </div>
+
+                    <div *ngIf="hasError('password', 'minLenght') || hasError('password', 'maxLenght')" class="invalid-feedback">
+                        Must be between 10-50 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <input
+                        type="password"
+                        [ngClass]="{'is-invalid' : 
+                                    (formHasError('isMatching') || hasErrors('confirmPassword')) 
+                                    && isTouched('confirmPassword'),
+                                    'is-valid' : 
+                                    (!formHasError('isMatching') || !hasErrors('confirmPassword')) 
+                                    && isTouched('confirmPassword')}"
+                        class="form-control form-control-lg"
+                        formControlName="confirmPassword"
+                        placeholder="Confirm Password*">
+
+                    <div *ngIf="hasError('confirmPassword', 'required')" class="invalid-feedback">
+                        Confirm Password is required
+                    </div>
+
+                    <div *ngIf="formHasError('isMatching')" class="invalid-feedback">
+                        Password do not match
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-block mb-3 text-dark mt-2"
+                    [disabled]="!registerForm.valid">Register</button>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+

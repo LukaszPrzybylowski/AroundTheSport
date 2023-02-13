@@ -1,0 +1,21 @@
+<div class="container" *ngIf="!!article">
+
+    <div class="d-flex justify-content-center">
+        <h1 class="display-4 mt-5 text-center">{{article.title}}</h1>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <h6>Written by {{article.username}} - {{article.publishDate | date:'medium'}}
+        <span *ngIf="article.publishDate !== article.updateDate"> | Updated on {{article.updateDate | date:'medium'}}</span>
+        </h6>  
+    </div>
+
+    <div class="mt-4">
+        <img src="{{articlePhotoUrl}}" class="article-image img-fluid text-wrapper">
+        <p class="article-content">
+            {{article.content}}
+        </p>
+    </div>
+
+    <app-comment-system *ngIf="article" [articleId]="article.articleId"></app-comment-system>
+</div>

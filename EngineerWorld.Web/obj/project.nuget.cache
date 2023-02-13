@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GjqJkeYYUSbkkygYGMFVG0uuFX5lp1x6aLgz61QKRv1gNh+rDfWXec5QuTOnWoJxNHufqzvNxHIYbF3nVEzDyA==",
+  "dgSpecHash": "ymUUuK1Y6zAKf9GeAfK0e6s2agz90KZtl8VmxF1iySzM//BGv67FbCNYLo3iU/aHxyfzm5OpxW9IW0MUz90pgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\EngineerWorld-Orig\\EngineerWorld\\EngineerWorld\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
+  "projectFilePath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Web\\EngineerWorld.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lukas\\.nuget\\packages\\cloudinarydotnet\\1.20.0\\cloudinarydotnet.1.20.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
