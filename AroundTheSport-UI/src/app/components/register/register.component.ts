@@ -15,13 +15,7 @@ export class RegisterComponent implements OnInit {
 
   professions: string[] = ["Trainer", "Dietician", "Physiotherapist", "Gym owner", "Quest"]; 
 
-  allProfessions = [
-     {name: 'Trainer', prof: 'Trainer'},
-     {name: 'Dietician', prof: 'Dietician'},
-     {name: 'Physiotherapist', prof: 'Physiotherapist'},
-     {name: 'Gym owner', prof: 'Gym owner'},
-     {name: 'Quest', prof: 'Quest'}
-  ] ;
+  allProfessions: any = ['Trainer','Dietician','Physiotherapist','Gym owner','Quest'] ;
 
   constructor(
     private accountService: AccountService,
@@ -71,6 +65,10 @@ export class RegisterComponent implements OnInit {
     }, {
       validators: this.matchValue
     });
+  }
+
+  changeProfession(e: any){
+    console.log(this.registerForm.value)
   }
 
   formHasError(error: string){

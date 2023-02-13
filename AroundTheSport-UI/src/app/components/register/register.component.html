@@ -53,21 +53,15 @@
                 </div>
 
                 <div class="form-group mt-2">
-                    <form #f="ngForm" 
-                        type="text"
-                        [ngClass]="{'is-invalid' : hasErrors('profession') && isTouched('profession'),
-                            'is-valid' : !hasErrors('profession') && isTouched('profession')}"
-                        class="form-control form-control-lg"
-                        formControlName="profession"
-                        placeholder="Profession*">
-                        <select name="profession" ngModel>
-                            <option value="" disabled>Choose a profession</option>>
-                            <option *ngFor="let profession of allProfessions" [ngValue]="profession">
-                                {{profession.prof}}
-                            </option>
-                        </select>
-                    </form>
-
+                    <label for="profession">Profession*:</label> 
+                    <select [ngClass]="{'is-invalid' : hasErrors('profession') && isTouched('profession'),
+                    'is-valid' : !hasErrors('profession') && isTouched('profession')}"
+                    formControlName="profession" class="form-control" 
+                    (change)="changeProfession($event)">
+                        <option disabled>Select Profession</option>
+                        <option>Choose Profession</option>
+                        <option *ngFor="let profession of allProfessions">{{profession}}</option>
+                    </select>         
                     <div *ngIf="hasError('profession', 'required')" class="invalid-feedback">
                         Profession is required
                     </div>
