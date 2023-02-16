@@ -101,15 +101,15 @@ namespace EngineerWorld.Web.Controllers
         }
 
         [Authorize]
-        [HttpPost("accountSettings")]
-        public async Task<ActionResult<ApplicationUserIdentity>> UpdateUser(ApplicationUserIdentity applicationUserIdentity)
+        [HttpPatch("accountSettings")]
+        public async Task<ActionResult<ApplicationUserUpdate>> UpdateUser(ApplicationUserUpdate applicationUserUpdate)
         {
 
             int applicaitonUserId = int.Parse(User.Claims.First(i => i.Type == JwtRegisteredClaimNames.NameId).Value);
 
-            if (applicationUserIdentity.ApplicationUserId == applicaitonUserId)
+            if (applicaitonUserId != null)
             {
-                var applicationUserUpdate = await _accountRepository.UpdateUserAsync(applicationUserIdentity, applicaitonUserId);
+                var applicationUserUpdateDTO = await _accountRepository.UpdateUserAsync(applicationUserUpdate, applicaitonUserId);
 
                 return Ok(applicationUserUpdate);
             }

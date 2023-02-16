@@ -10,6 +10,6 @@ namespace EngineerWorld.Repository
 
         public Task<ApplicationUserIdentity> GetByUsernameAsync(string normalizedUsername, CancellationToken cancellationToken);
 
-        public Task<ApplicationUserIdentity> UpdateUserAsync(ApplicationUserIdentity applicationUserIdentity, int applicationUserId);
+        public Task<ApplicationUserUpdate> UpdateUserAsync(ApplicationUserUpdate applicationUserUpdate, int applicationUserId);
     }
 }

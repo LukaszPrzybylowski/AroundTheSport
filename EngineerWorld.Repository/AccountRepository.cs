@@ -80,7 +80,7 @@ namespace EngineerWorld.Repository
             return applicationUser;
         }
 
-        public async Task<ApplicationUserIdentity> UpdateUserAsync(ApplicationUserIdentity applicationUserIdentity, int applicationUserId)
+        public async Task<ApplicationUserUpdate> UpdateUserAsync(ApplicationUserUpdate applicationUserUpdate, int applicationUserId)
         {
 
             var dataTable = new DataTable();
@@ -89,25 +89,34 @@ namespace EngineerWorld.Repository
             dataTable.Columns.Add("Company", typeof(string));
             dataTable.Columns.Add("Profession", typeof(string));
 
-            dataTable.Rows.Add(applicationUserIdentity.Fullname, applicationUserIdentity.Lastname, applicationUserIdentity.Company, applicationUserIdentity.Profession);
+            dataTable.Rows.Add(applicationUserUpdate.Fullname, applicationUserUpdate.Lastname, applicationUserUpdate.Company, applicationUserUpdate.Profession);
 
-            ApplicationUserIdentity newApplicationUserIdentity;
+            ApplicationUserUpdate newApplicationUserUpdateDTO;
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            try
             {
-                await connection.OpenAsync();
+                using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                {
+                    await connection.OpenAsync();
 
-                newApplicationUserIdentity = await connection.ExecuteScalarAsync<ApplicationUserIdentity>(
-                    "Account_Update",
-                    new
-                    {
-                        ApplicationUserIdentity = dataTable.AsTableValuedParameter("dbo.AccountType"),
-                        ApplicationUserId = applicationUserId
-                    }, commandType: CommandType.StoredProcedure
-                    );
+                    newApplicationUserUpdateDTO = await connection.ExecuteScalarAsync<ApplicationUserUpdate>(
+                        "Account_Update",
+                        new
+                        {
+                            ApplicationUser = dataTable.AsTableValuedParameter("dbo.AccountTypeUpdate"),
+                            ApplicationUserId = applicationUserId
+                        }, commandType: CommandType.StoredProcedure
+                        );
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
 
-            return newApplicationUserIdentity;
+         
+
+            return newApplicationUserUpdateDTO;
 
         }
     }
