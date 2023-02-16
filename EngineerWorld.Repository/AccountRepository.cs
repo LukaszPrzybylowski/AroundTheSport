@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using EngineerWorld.Model.Account;
+using EngineerWorld.Model.Article;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EngineerWorld.Repository
@@ -76,6 +78,37 @@ namespace EngineerWorld.Repository
             }
 
             return applicationUser;
+        }
+
+        public async Task<ApplicationUserIdentity> UpdateUserAsync(ApplicationUserIdentity applicationUserIdentity, int applicationUserId)
+        {
+
+            var dataTable = new DataTable();
+            dataTable.Columns.Add("Fullname", typeof(string));
+            dataTable.Columns.Add("Lastname", typeof(string));
+            dataTable.Columns.Add("Company", typeof(string));
+            dataTable.Columns.Add("Profession", typeof(string));
+
+            dataTable.Rows.Add(applicationUserIdentity.Fullname, applicationUserIdentity.Lastname, applicationUserIdentity.Company, applicationUserIdentity.Profession);
+
+            ApplicationUserIdentity newApplicationUserIdentity;
+
+            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                await connection.OpenAsync();
+
+                newApplicationUserIdentity = await connection.ExecuteScalarAsync<ApplicationUserIdentity>(
+                    "Account_Update",
+                    new
+                    {
+                        ApplicationUserIdentity = dataTable.AsTableValuedParameter("dbo.AccountType"),
+                        ApplicationUserId = applicationUserId
+                    }, commandType: CommandType.StoredProcedure
+                    );
+            }
+
+            return newApplicationUserIdentity;
+
         }
     }
 

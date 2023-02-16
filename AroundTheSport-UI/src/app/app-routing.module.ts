@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArticleEditComponent } from './components/article-components/article-edit/article-edit.component';
 import { ArticleComponent } from './components/article-components/article/article.component';
 import { ArticlesComponent } from './components/article-components/articles/articles.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForumComponent } from './components/forum-components/forum/forum.component';
 import { ForumsComponent } from './components/forum-components/forums/forums.component';
@@ -17,6 +18,7 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {path : '', redirectTo: '/home', pathMatch: 'full'},
   {path : 'home', component : HomeComponent},
+  {path : 'contact', component: ContactComponent},
   {path : 'login', component: LoginComponent},
   {path : 'register', component: RegisterComponent},
   {path : 'articles', component : ArticlesComponent},

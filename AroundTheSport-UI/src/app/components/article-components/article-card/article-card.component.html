@@ -5,9 +5,9 @@
             {{article.title}}
         </h4>
 
-        <p class="card-text text-light" *ngIf="!!articlePhotoUrl">{{article.content | summary:100}}</p>
+        <p class="card-text text-light" *ngIf="!!articlePhotoUrl">{{article.content | summary:90}}</p>
 
-        <p class="card-text text-light" *ngIf="!articlePhotoUrl">{{article.content | summary:390}}</p>
+        <p class="card-text text-light" *ngIf="!articlePhotoUrl">{{article.content | summary:340}}</p>
         
         <button class="btn btn-xs text-dark" (click)="readMore(article.articleId)">
             Read More

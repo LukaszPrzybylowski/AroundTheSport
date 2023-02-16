@@ -1,4 +1,5 @@
 ﻿using EngineerWorld.Model.Account;
+
 using Microsoft.AspNetCore.Identity;
 
 namespace EngineerWorld.Repository
@@ -8,5 +9,7 @@ namespace EngineerWorld.Repository
         public Task<IdentityResult> CreateAsync(ApplicationUserIdentity user, CancellationToken cancellationToken);
 
         public Task<ApplicationUserIdentity> GetByUsernameAsync(string normalizedUsername, CancellationToken cancellationToken);
+
+        public Task<ApplicationUserIdentity> UpdateUserAsync(ApplicationUserIdentity applicationUserIdentity, int applicationUserId);
     }
 }

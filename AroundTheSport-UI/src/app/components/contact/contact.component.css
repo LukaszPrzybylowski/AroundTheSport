@@ -1,0 +1,27 @@
+.container{
+    background-color: black;
+    max-width: 100% !important;
+    min-height: 100vh;
+    border-top: 1px solid #F3E09C;
+}
+.card{
+    border: 1px solid  #F3E09C;
+    background-color: black;
+    margin-top: 10%;
+    flex-direction: row;
+}
+.display-4{
+    color: #F3E09C
+}
+.display-6{
+    color: #F3E09C
+}
+.display{
+    color: #F3E09C
+}
+  
+
+.card img {
+border: 1px solid #F3E09C;
+width: 30%;
+}

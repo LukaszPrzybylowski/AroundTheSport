@@ -1,8 +1,12 @@
 ﻿using EngineerWorld.Model.Account;
+using EngineerWorld.Model.Article;
+using EngineerWorld.Repository;
 using EngineerWorld.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace EngineerWorld.Web.Controllers
 {
@@ -13,12 +17,15 @@ namespace EngineerWorld.Web.Controllers
         private readonly ITokenService _tokenService;
         private readonly UserManager<ApplicationUserIdentity> _userManager;
         private readonly SignInManager<ApplicationUserIdentity> _signInManager;
+        private readonly IAccountRepository _accountRepository;
 
-        public AccountController(ITokenService tokenService, UserManager<ApplicationUserIdentity> userManager, SignInManager<ApplicationUserIdentity> signInManager)
+        public AccountController(ITokenService tokenService, UserManager<ApplicationUserIdentity> userManager, SignInManager<ApplicationUserIdentity> signInManager, IAccountRepository accountRepository)
         {
             _tokenService = tokenService;
             _userManager = userManager;
             _signInManager = signInManager;
+            _accountRepository = accountRepository;
+
         }
 
         [HttpPost("register")]
@@ -92,5 +99,23 @@ namespace EngineerWorld.Web.Controllers
 
             return BadRequest("Invalid login attempt.");
         }
+
+        [Authorize]
+        [HttpPost("accountSettings")]
+        public async Task<ActionResult<ApplicationUserIdentity>> UpdateUser(ApplicationUserIdentity applicationUserIdentity)
+        {
+
+            int applicaitonUserId = int.Parse(User.Claims.First(i => i.Type == JwtRegisteredClaimNames.NameId).Value);
+
+            if (applicationUserIdentity.ApplicationUserId == applicaitonUserId)
+            {
+                var applicationUserUpdate = await _accountRepository.UpdateUserAsync(applicationUserIdentity, applicaitonUserId);
+
+                return Ok(applicationUserUpdate);
+            }
+            
+           return BadRequest("You can't update data for this User.");
+        }
+  
     }
 }

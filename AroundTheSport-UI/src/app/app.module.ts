@@ -7,9 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TypeaheadModule} from 'ngx-bootstrap/typeahead';
 import { CarouselModule} from 'ngx-bootstrap/carousel';
 import { PaginationModule} from 'ngx-bootstrap/pagination';
-import { NgSelectModule } from '@ng-select/ng-select';
-import { MatFormFieldModule,} from '@angular/material/form-field'; 
-import {MatSelectModule} from "@angular/material/select";
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -38,6 +36,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PhotoAlbumComponent } from './components/photo-album/photo-album.component';
 import { JwtInterceptor } from './interceptors/jwt/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error/error.interceptor';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -65,6 +64,7 @@ import { ErrorInterceptor } from './interceptors/error/error.interceptor';
     RegisterComponent,
     NotFoundComponent,
     PhotoAlbumComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,9 +73,6 @@ import { ErrorInterceptor } from './interceptors/error/error.interceptor';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule,
-    MatFormFieldModule,
-    MatSelectModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),

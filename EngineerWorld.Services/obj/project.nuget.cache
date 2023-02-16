@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ebah2Cn4xtnLcbrJ4dvBwCY7KsTBVdHNAeclLqCbHVJIcHlnbMUm2K/lYMJn3MRKXztySpCrrL+UTfhEC83xRg==",
+  "dgSpecHash": "meI8dKZ4fsVAbylm0JDHqKNpPnKQjwQ/SPa10G+hoObsNx1hoVyqKQx6CZ2lDmFioxagp1fI44zNxFCUhvSwzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
+  "projectFilePath": "c:\\Users\\lukas\\OneDrive\\Pulpit\\AroundTheSport-Pro\\AroundTheSport\\EngineerWorld.Services\\EngineerWorld.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lukas\\.nuget\\packages\\cloudinarydotnet\\1.20.0\\cloudinarydotnet.1.20.0.nupkg.sha512",
     "C:\\Users\\lukas\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

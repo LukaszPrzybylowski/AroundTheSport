@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-top: 1px solid  #F3E09C;
 }
 .display-4{
     color: #F3E09C;
