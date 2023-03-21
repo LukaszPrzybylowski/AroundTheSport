@@ -11,7 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.OpenApi.Models;
-
+using EngineerWorld.Repository.Calculator;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,7 @@ builder.Services.Configure<CloudinaryOptions>(builder.Configuration.GetSection("
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
+builder.Services.AddScoped<IBmiClassificationDeterminator, BmiClassificationDeterminator>();
 
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddScoped<IArticleCommentRepository, ArticleCommentRepository>();
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 builder.Services.AddScoped<IForumRepository, ForumRepository>();
 builder.Services.AddScoped<IForumCommentRepository, ForumCommentRepository>();
+builder.Services.AddScoped<ICalculatorBmiRepository, CalculatorBmiRepository>();
 
 builder.Services.AddIdentityCore<ApplicationUserIdentity>(opt =>
 {
