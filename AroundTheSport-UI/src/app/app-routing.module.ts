@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 import { ArticleEditComponent } from './components/article-components/article-edit/article-edit.component';
 import { ArticleComponent } from './components/article-components/article/article.component';
 import { ArticlesComponent } from './components/article-components/articles/articles.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path : 'contact', component: ContactComponent},
   {path : 'login', component: LoginComponent},
   {path : 'register', component: RegisterComponent},
+  {path : 'accountSettings', component: AccountSettingsComponent},
   {path : 'articles', component : ArticlesComponent},
   {path : 'articles/:id', component: ArticleComponent},
   {path : 'forums', component : ForumComponent},

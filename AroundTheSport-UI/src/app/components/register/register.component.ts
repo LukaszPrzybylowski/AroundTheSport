@@ -13,9 +13,7 @@ export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
 
-  professions: string[] = ["Trainer", "Dietician", "Physiotherapist", "Gym owner", "Quest"]; 
-
-  allProfessions: any = ['Trainer','Dietician','Physiotherapist','Gym owner','Quest'] ;
+  public allProfessions: any = ['Trainer','Dietician','Physiotherapist','Gym owner','Quest'] ;
 
   constructor(
     private accountService: AccountService,

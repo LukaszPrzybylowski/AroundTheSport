@@ -6,6 +6,7 @@ import { ApplicationUserCreate } from 'src/app/models/account/application-user-c
 import { ApplicationUserLogin } from 'src/app/models/account/application-user-login.model';
 import { ApplicationUser } from 'src/app/models/account/application-user-model';
 import { environment } from 'src/environments/environment';
+import { ApplicationUserUpdate } from 'src/app/models/account/application-user-update.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,19 @@ export class AccountService {
   ) { 
 
     this.currentUserSubject$ = new BehaviorSubject<ApplicationUser>(JSON.parse(localStorage.getItem('engineerWorld-currentUser')|| '{}'));
+  }
+
+  update(model: ApplicationUserUpdate) : Observable<ApplicationUserUpdate>{
+    return this.http.post(`${environment.webApi}/Account/accountSettings`, model).pipe(
+      map((user: any)=>{
+
+        if(user){
+          localStorage.setItem('engineerWorld-currentUser', JSON.stringify(user));
+          this.setCurrentUser(user)
+        }
+        return user;
+      })
+    )
   }
 
   login(model: ApplicationUserLogin) : Observable<ApplicationUser>  {
