@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            
+            <h1 class="d-flex justify-content-center">Account Settings</h1>
+            <form [formGroup]="updateUserForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group mt-2">
+                    <label>Fullname</label>
+                    <input                       
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('fullname') && isTouched('fullname'),
+                            'is-valid' : !hasErrors('fullname') && isTouched('fullname')}"
+                        class="form-control form-control-lg"
+                        formControlName="fullname"
+                        placeholder="{{this.accountService.currentUserValue.fullname}}"
+                        [(ngModel)]="this.accountService.currentUserValue.fullname">
+
+                    <div *ngIf="hasError('fullname', 'required')" class="invalid-feedback">
+                        Full Name is required
+                    </div>
+
+                    <div *ngIf="hasError('fullname', 'minLenght') || hasError('fullname', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label>Lastname</label>
+                    <input                   
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('lastname') && isTouched('lastname'),
+                            'is-valid' : !hasErrors('lastname') && isTouched('lastname')}"
+                        class="form-control form-control-lg"
+                        formControlName="lastname"
+                        placeholder="{{this.accountService.currentUserValue.lastname}}"
+                        [(ngModel)]="this.accountService.currentUserValue.lastname">
+
+                    <div *ngIf="hasError('lastname', 'minLenght') || hasError('lastname', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label>Company</label>
+                    <input
+                        type="text"
+                        [ngClass]="{'is-invalid' : hasErrors('company') && isTouched('company'),
+                            'is-valid' : !hasErrors('company') && isTouched('company')}"
+                        class="form-control form-control-lg"
+                        formControlName="company"
+                        placeholder="{{this.accountService.currentUserValue.company}}"
+                        [(ngModel)]="this.accountService.currentUserValue.company">
+
+                    <div *ngIf="hasError('company', 'minLenght') || hasError('company', 'maxLenght')" class="invalid-feedback">
+                        Must be between 1-30 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label>Profession</label>
+                    <select [ngClass]="{'is-invalid' : hasErrors('profession') && isTouched('profession'),
+                    'is-valid' : !hasErrors('profession') && isTouched('profession')}"
+                    formControlName="profession" class="form-control form-control-lg" 
+                    (change)="profession.changeProfession($event)"
+                    required
+                    [(ngModel)]="this.accountService.currentUserValue.profession">
+                        <option selected >{{this.accountService.currentUserValue.profession}}</option>
+                        <option *ngFor="let profession of profession">{{profession}}</option>
+                    </select>         
+                    <div *ngIf="hasError('profession', 'required')" class="invalid-feedback">
+                        Profession is required
+                    </div>
+
+                    <div *ngIf="hasError('profession', 'minLenght') || hasError('profession', 'maxLenght')" class="invalid-feedback">
+                        Must be between 5-20 characters
+                    </div>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        placeholder="{{this.accountService.currentUserValue.username}}"
+                        [readonly]="true"
+                        [(ngModel)]="this.accountService.currentUserValue.username">
+                </div>
+                
+
+                <div class="form-group   mt-2">
+                    <label>Email</label>
+                    <input
+                        type="text"
+                        class="form-control form-control-lg"
+                        placeholder="{{this.accountService.currentUserValue.email}}"
+                        [readonly]="true"
+                        [(ngModel)]="this.accountService.currentUserValue.email">
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-block mb-3 text-dark mt-2"
+                    [disabled]="!updateUserForm.value && !updateUserForm.pristine">Save</button>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>

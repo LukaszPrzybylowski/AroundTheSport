@@ -1,0 +1,18 @@
+.container{
+    max-width: 100% !important;
+    min-height: 100vh;
+    background-color: black;
+    background-image: url(/assets/img/LogoFrame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn{
+    background-color:#F3E09C;
+}
+.d-flex{
+    color:#F3E09C;
+}
+label{
+    color:#F3E09C;
+}

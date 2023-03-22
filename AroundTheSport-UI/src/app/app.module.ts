@@ -37,6 +37,7 @@ import { PhotoAlbumComponent } from './components/photo-album/photo-album.compon
 import { JwtInterceptor } from './interceptors/jwt/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error/error.interceptor';
 import { ContactComponent } from './components/contact/contact.component';
+import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
 
 
 
@@ -65,6 +66,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NotFoundComponent,
     PhotoAlbumComponent,
     ContactComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,6 +85,7 @@ import { ContactComponent } from './components/contact/contact.component';
     PaginationModule.forRoot(),
   ],
   providers: [
+    RegisterComponent,
     HttpClient,
     {provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide : HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}

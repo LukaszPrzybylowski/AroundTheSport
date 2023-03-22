@@ -47,6 +47,8 @@ export class ArticleEditComponent implements OnInit{
         Validators.minLength(300),
         Validators.maxLength(100000),
       ]],
+
+      
       photoDescription: [null],
       photoId: [null]
     });
