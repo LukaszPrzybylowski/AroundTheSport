@@ -1,7 +1,7 @@
 <div class="container">
-    <div *ngIf="!accountService.isLoggedIn(); else hello_window">
+    <div *ngIf="!accountService.isLoggedIn()">
             <h2 class="text-light">Login</h2>
-            <p class="text-light">Get to your dashboard and start blogging</p>
+            <p class="text-light">Get to your dashboard and start articling</p>
 
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
@@ -49,19 +49,10 @@
                     </div>
                         <p class="p-4 align-self-end text-light">
                             Don't have an account ?
-                        <button class="btn-dark text-light btn-link p-1" routerLink="/register">Create an account</button>
+                        <button class="btn text-dark btn-link p-1" routerLink="/register">Create an account</button>
                         </p>
                 </div>
             </form>
     </div>
-    <ng-template #hello_window class="col-lg-4 mt-5">
-    <div class="card center vard form">
-        <div class="card-body bg-black">
-            <video autoplay muted loop id="myVideo">
-                <source src="/assets/img/Hello1.mp4" type="video/mp4"/>
-                    </video>
-        </div>
-</div>
-</ng-template>
-</div>
 
+</div>

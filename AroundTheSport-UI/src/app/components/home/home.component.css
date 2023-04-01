@@ -3,11 +3,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
     max-width: 100% !important;
     min-height: 100vh;
     left: 0;
-    border-top:1px solid #F3E09C;
+    position: relative;
+   
 }
 
 .dark-form{
@@ -18,11 +18,53 @@
     position: relative;
     left: 0;
     top: 1%;
+    max-width: 100% !important;
+    min-height: 100%;
+}
+strong{
+    color:#F3E09C;
 }
 .card{
-    min-height: 300px;
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    position: relative;
     min-width: 400px;
+    max-width: 400px;
+    min-height: 400px;
     left: 20%;
     top: 1%;
-    background-color: #F3E09C;
+    margin-bottom: 10%;
+    overflow: hidden;
+}
+.card video{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 0;
+    left: 0;
+}
+.card .card-content{
+    padding: 24px;
+    padding-top: 100px;
+    z-index: 3;
+    position: relative;
+}
+.card .card-content h5{
+    font-size: 30px;
+    margin: 0;
+    color: #F3E09C;
+    margin-top: 100px;
+    margin-left: 120px;
+    font-family: "Great Vibes", cursive; 
+    font-size: 30px;
+    font-weight:lighter;
+}
+img{
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.row{
+    margin-left: 10%;
 }

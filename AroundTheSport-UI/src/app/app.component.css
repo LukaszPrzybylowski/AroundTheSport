@@ -1,7 +1,10 @@
 
 .content{
-    min-height: calc(100vh-100px);
+    min-height: calc(100vh-50px);
     padding-bottom: 30px;
+    border-top:1px solid #F3E09C;
+    left: 0;
+    width: 100%;
 }
 
 .footer{

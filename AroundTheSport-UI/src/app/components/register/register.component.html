@@ -1,11 +1,29 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3 mt-5">
+        <div class="col-lg-6 d-none d-lg-block mt-5">
+            <div class="card">
+                <img style="margin-left: 60px;" src="/assets/img/JoinToUsIcon.png">
+                <h1>Join to Us !</h1>
+                <p>Grow with Us</p>
+                <p>and become a part of <strong>US!</strong></p>
+                <p><img src="/assets/img/LogoNazwa.png" width="220" height="50"></p>
+            </div>
+        </div>
+        <div class="col-lg-1  d-lg-block" >
+            <p>
+            <img src="/assets/img/nameIcon.png">
+            </p>
+            <p><img style="margin-top: 65px;" src="/assets/img/CompanyIcon.png"></p>
+            <p><img style="margin-top: 60px;" src="/assets/img/UsernameIcon.png"></p>
+            <p><img  src="/assets/img/EmailIcon.png"></p>
+            <p><img src="/assets/img/PasswordIcon.png"></p>
+            <p><img  src="/assets/img/ConfirmPasswordIcon.png"></p>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block mt-5" >
             
             <h1 class="text-light">Don't Have An Account?</h1>
             <p class="text-light">Just fill out the form and register</p>
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-
                 <div class="form-group">
                     <input
                         type="text"
@@ -14,6 +32,7 @@
                         class="form-control form-control-lg"
                         formControlName="fullname"
                         placeholder="Full Name*">
+                    </div>
 
                     <div *ngIf="hasError('fullname', 'required')" class="invalid-feedback">
                         Full Name is required
@@ -22,7 +41,6 @@
                     <div *ngIf="hasError('fullname', 'minLenght') || hasError('fullname', 'maxLenght')" class="invalid-feedback">
                         Must be between 1-30 characters
                     </div>
-                </div>
 
                 <div class="form-group mt-2">
                     <input

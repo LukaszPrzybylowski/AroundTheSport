@@ -8,19 +8,32 @@
                     <source src="/assets/img/Sport5.mp4" type="video/mp4"/>
                         </video>
                 </div>
-                <div class="col-2">
+                <div class="col-2 d-lg-block">
+                    <a class="icon" routerLink = "facebook">
+                        <img src="/assets/img/facebook-logo.png" alt='icon'>
+                    </a>
+                    <a class="icon"  routerLink = "instagram">
+                        <img src="/assets/img/instagram-logo.png" alt='icon'>
+                    </a>
+                    <a class="icon"  routerLink = "twitter">
+                        <img src="/assets/img/twitter-logo.png" alt='icon'>
+                    </a>
+                    <a class="icon" routerLink = "linkedin">
+                        <img src="/assets/img/linkedin-logo.png" alt='icon'>
+                    </a>
+                    
                 </div>
             </div>
             <div class="row">
             
-                <div class="col-lg-8 d-none d-lg-block mt-5">
+                <div class="col-lg-6 d-none d-lg-block mt-5">
 
                     <h1 class="display-4 text-light">
-                        Start writing your <strong> first blog</strong> and <strong>publish today</strong>
+                        Start writing your <strong> first article</strong> and publish today <strong>!</strong>
                     </h1>
 
                     <h3 class="display-4 text-light">
-                        <strong> Join NOW </strong> and <strong>share your knowledge with others</strong>
+                         Join<strong> NOW </strong> and share your knowledge with others
                     </h3>
                     <div class="d-flex">
                         <div class="p-4 align-self-start">
@@ -53,21 +66,21 @@
                     </div>
                 </div>
 
-                <div  class="col-lg-4 mt-5">
-                    <div *ngIf="!accountService.isLoggedIn(); else hello_window">
-                        <div class="card center vard form">
-                        <div class="card-body bg-black">
-                            <app-login></app-login>
-                        </div> 
-                        </div>                      
-                    </div>
-                    <ng-template #hello_window class="col-lg-2 mt-5" style="width: auto;">
-                                <video autoplay muted loop id="myVideo">
-                                    <source src="/assets/img/Hello1.mp4" type="video/mp4"/>
-                                        </video>
-                    </ng-template>
-                </div>
-            </div>
+                <div  class="col-lg-6 mt-5">
+                        <div class="card">
+                                <div *ngIf="!accountService.isLoggedIn(); else hello_window"></div>
+                                    <app-login></app-login>
+                                </div>
+                            <ng-template #hello_window>
+                                    <video autoplay muted loop>
+                                        <source src="/assets/img/Hello1.mp4" type="video/mp4"/>
+                                    </video>
+                                    <div class="card-content">
+                                        <h5 class="username">{{ accountService.currentUserValue.username }}</h5>
+                                    </div>
+                            </ng-template>
+                        </div>                     
+                </div>         
         </div>
     </div>
     <app-famous-articles>The famous articles!</app-famous-articles>

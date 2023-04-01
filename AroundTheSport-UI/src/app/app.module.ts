@@ -10,7 +10,6 @@ import { PaginationModule} from 'ngx-bootstrap/pagination';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SummaryPipe } from './pipes/summary.pipe';
@@ -38,6 +37,7 @@ import { JwtInterceptor } from './interceptors/jwt/jwt.interceptor';
 import { ErrorInterceptor } from './interceptors/error/error.interceptor';
 import { ContactComponent } from './components/contact/contact.component';
 import { AccountSettingsComponent } from './components/account-settings/account-settings.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 

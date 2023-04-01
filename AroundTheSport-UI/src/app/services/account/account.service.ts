@@ -23,7 +23,7 @@ export class AccountService {
   }
 
   update(model: ApplicationUserUpdate) : Observable<ApplicationUserUpdate>{
-    return this.http.post(`${environment.webApi}/Account/accountSettings`, model).pipe(
+    return this.http.patch(`${environment.webApi}/Account/accountSettings`, model).pipe(
       map((user: any)=>{
 
         if(user){

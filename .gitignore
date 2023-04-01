@@ -79,6 +79,7 @@ aio/content/examples/.DS_Store
 mono_crash.*
 
 # Build results
+Debug/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -93,6 +94,10 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -159,7 +164,11 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-
+*.exe
+*.pdb
+*.manifest
+*.cache
+/EngineerWorld/bin/Debug
 # Chutzpah Test files
 _Chutzpah*
 

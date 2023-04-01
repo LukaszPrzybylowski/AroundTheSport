@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ApplicationUser } from 'src/app/models/account/application-user-model';
 import { ApplicationUserUpdate } from 'src/app/models/account/application-user-update.model';
 import { AccountService } from 'src/app/services/account/account.service';
 import { RegisterComponent } from '../register/register.component';
@@ -24,7 +23,8 @@ export class AccountSettingsComponent implements OnInit {
       public accountService: AccountService,
       private formBuilder: FormBuilder,
       private toastr: ToastrService,
-      private componentRegister: RegisterComponent
+      private componentRegister: RegisterComponent,
+      private router: Router,
     ){}
 
     ngOnInit(): void {
@@ -82,16 +82,17 @@ export class AccountSettingsComponent implements OnInit {
 
   onSubmit(){
     let applicationUserUpdate: ApplicationUserUpdate = new ApplicationUserUpdate(
-      this.updateUserForm.get('fullanme')!.value,
+      this.updateUserForm.get('fullname')!.value,
       this.updateUserForm.get('lastname')!.value,
       this.updateUserForm.get('company')!.value,
       this.updateUserForm.get('profession')!.value
     );
 
-
     this.accountService.update(applicationUserUpdate).subscribe((userUpdate) => {
       this.updateForm(userUpdate);
-      this.toastr.info('Data seved.');;
+      this.toastr.info('Data saved.');
+      this.router.navigate(["/home"]);
+      this.toastr.info('Please Login again');
     })
   }
 

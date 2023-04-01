@@ -1,6 +1,24 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3 mt-5">
+        <div class="col-lg-6 d-none d-lg-block mt-5">
+            <div class="card">
+            <h1 class="d-flex">Your Account</h1>
+            <img src="/assets/img/EmptyAvatarImage.jpg" alt="Avatar" class="avatar">
+            <div class="inLine1">
+                <h1>{{this.accountService.currentUserValue.fullname}}</h1>
+                <h1 id="2">{{this.accountService.currentUserValue.lastname}}</h1>
+            </div>
+            <div class="inLine2">
+                <h3 class="d-flex">Profession: </h3>
+                <h3 class="d-flex">{{this.accountService.currentUserValue.profession}}</h3>
+            </div>
+            <div class="inLine2">
+                <h3 class="d-flex">Company: </h3>
+                <h3 class="d-flex">{{this.accountService.currentUserValue.company}}</h3>
+            </div>
+        </div>
+    </div>
+        <div class="col-lg-5 mt-5">
             
             <h1 class="d-flex justify-content-center">Account Settings</h1>
             <form [formGroup]="updateUserForm" (ngSubmit)="onSubmit()">
@@ -13,8 +31,7 @@
                             'is-valid' : !hasErrors('fullname') && isTouched('fullname')}"
                         class="form-control form-control-lg"
                         formControlName="fullname"
-                        placeholder="{{this.accountService.currentUserValue.fullname}}"
-                        [(ngModel)]="this.accountService.currentUserValue.fullname">
+                        placeholder="{{this.accountService.currentUserValue.fullname}}">
 
                     <div *ngIf="hasError('fullname', 'required')" class="invalid-feedback">
                         Full Name is required
@@ -33,8 +50,7 @@
                             'is-valid' : !hasErrors('lastname') && isTouched('lastname')}"
                         class="form-control form-control-lg"
                         formControlName="lastname"
-                        placeholder="{{this.accountService.currentUserValue.lastname}}"
-                        [(ngModel)]="this.accountService.currentUserValue.lastname">
+                        placeholder="{{this.accountService.currentUserValue.lastname}}">
 
                     <div *ngIf="hasError('lastname', 'minLenght') || hasError('lastname', 'maxLenght')" class="invalid-feedback">
                         Must be between 1-30 characters
@@ -49,8 +65,7 @@
                             'is-valid' : !hasErrors('company') && isTouched('company')}"
                         class="form-control form-control-lg"
                         formControlName="company"
-                        placeholder="{{this.accountService.currentUserValue.company}}"
-                        [(ngModel)]="this.accountService.currentUserValue.company">
+                        placeholder="{{this.accountService.currentUserValue.company}}">
 
                     <div *ngIf="hasError('company', 'minLenght') || hasError('company', 'maxLenght')" class="invalid-feedback">
                         Must be between 1-30 characters
@@ -61,10 +76,9 @@
                     <label>Profession</label>
                     <select [ngClass]="{'is-invalid' : hasErrors('profession') && isTouched('profession'),
                     'is-valid' : !hasErrors('profession') && isTouched('profession')}"
-                    formControlName="profession" class="form-control form-control-lg" 
-                    (change)="profession.changeProfession($event)"
-                    required
-                    [(ngModel)]="this.accountService.currentUserValue.profession">
+                    formControlName="profession" 
+                    class="form-control form-control-lg" 
+                    required >
                         <option selected >{{this.accountService.currentUserValue.profession}}</option>
                         <option *ngFor="let profession of profession">{{profession}}</option>
                     </select>         
@@ -76,15 +90,13 @@
                         Must be between 5-20 characters
                     </div>
                 </div>
-
                 <div class="form-group mt-2">
                     <label>Username</label>
                     <input
                         type="text"
                         class="form-control form-control-lg"
                         placeholder="{{this.accountService.currentUserValue.username}}"
-                        [readonly]="true"
-                        [(ngModel)]="this.accountService.currentUserValue.username">
+                        [readonly]="true">
                 </div>
                 
 
@@ -94,13 +106,12 @@
                         type="text"
                         class="form-control form-control-lg"
                         placeholder="{{this.accountService.currentUserValue.email}}"
-                        [readonly]="true"
-                        [(ngModel)]="this.accountService.currentUserValue.email">
+                        [readonly]="true">
                 </div>
 
                 <div class="d-grid gap-2">
-                    <button class="btn btn-block mb-3 text-dark mt-2"
-                    [disabled]="!updateUserForm.value && !updateUserForm.pristine">Save</button>
+                    <button class="btn text-dark mr-2"
+                    [disabled]="!updateUserForm.valid && !updateUserForm.pristine">Save</button>
                 </div>
             </form>      
         </div>

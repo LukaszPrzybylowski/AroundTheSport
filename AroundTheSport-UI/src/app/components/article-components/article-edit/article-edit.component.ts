@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { TypeaheadMatch } from 'ngx-bootstrap/typeahead';
 import { ToastrService } from 'ngx-toastr';
-import { throwIfEmpty, VirtualTimeScheduler } from 'rxjs';
 import { ArticleCreate } from 'src/app/models/article/article-create-model';
 import { Article } from 'src/app/models/article/article.model';
 import { Photo } from 'src/app/models/photo/photo.model';
