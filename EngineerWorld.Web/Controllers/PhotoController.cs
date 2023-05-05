@@ -20,7 +20,7 @@ namespace EngineerWorld.Web.Controllers
         public PhotoController(
             IPhotoRepository photoRepository, 
             IArticleRepository articleRepository, 
-            IForumRepository forumRepository, 
+            IForumRepository forumRepository,
             IPhotoService photoService)
         {
             _photoRepository = photoRepository;
@@ -90,7 +90,7 @@ namespace EngineerWorld.Web.Controllers
 
                     var usedInForum = forums.Any(b => b.PhotoId == photoId);
 
-                    if (usedInArticle || usedInForum) return BadRequest("Cannot remove photo as it is being used in publsihed article(s) or in forum.");
+                    if (usedInArticle || usedInForum) return BadRequest("Cannot remove photo as it is being used in published article(s) or in forum.");
 
                     var deleteResult = await _photoService.DeletePhotoAsync(foundPhoto.PublicId);
 

@@ -41,6 +41,7 @@ namespace EngineerWorld.Web.Controllers
                 Lastname = applicationUserCreate.Lastname,
                 Company = applicationUserCreate.Company,
                 Profession = applicationUserCreate.Profession,
+                AvatarId = applicationUserCreate.AvatarId
             };
 
             var result = await _userManager.CreateAsync(applicationUserIdentity, applicationUserCreate.Password);
@@ -58,7 +59,8 @@ namespace EngineerWorld.Web.Controllers
                     Lastname = applicationUserIdentity.Lastname,
                     Company = applicationUserIdentity.Company,
                     Profession = applicationUserIdentity.Profession,
-                    Token = _tokenService.CreateToken(applicationUserIdentity)
+                    Token = _tokenService.CreateToken(applicationUserIdentity),
+                    AvatarId = applicationUserIdentity.AvatarId
                 };
 
                 return Ok(applicationUser);
@@ -88,7 +90,8 @@ namespace EngineerWorld.Web.Controllers
                         Lastname = applicationUserIdentity.Lastname,
                         Company = applicationUserIdentity.Company,
                         Profession = applicationUserIdentity.Profession,
-                        Token = _tokenService.CreateToken(applicationUserIdentity)
+                        Token = _tokenService.CreateToken(applicationUserIdentity),
+                        AvatarId = applicationUserIdentity.AvatarId
                     };
 
                     return Ok(applicationUser);
@@ -116,6 +119,14 @@ namespace EngineerWorld.Web.Controllers
             
            return BadRequest("You can't update data for this User.");
         }
-  
+
+        [HttpGet]
+        public async Task<ActionResult<ApplicationUserUpdate>> GetApplicationUser(int applicationUserId)
+        {
+            var applicationUser = await _accountRepository.GetApplicationUser(applicationUserId);
+
+            return Ok(applicationUser);
+        }
+
     }
 }

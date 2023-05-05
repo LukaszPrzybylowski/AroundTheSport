@@ -11,5 +11,7 @@ namespace EngineerWorld.Repository
         public Task<ApplicationUserIdentity> GetByUsernameAsync(string normalizedUsername, CancellationToken cancellationToken);
 
         public Task<ApplicationUserUpdate> UpdateUserAsync(ApplicationUserUpdate applicationUserUpdate, int applicationUserId);
+
+        public Task<ApplicationUserIdentity> GetApplicationUser(int applicationUserId);
     }
 }

@@ -35,5 +35,7 @@ namespace EngineerWorld.Model.Account
         [MinLength(5, ErrorMessage = "Must be at least 5-30 characters")]
         [MaxLength(30, ErrorMessage = "Must be at least 5-30 characters")]
         public string Profession { get; set; }
+
+        public int AvatarId { get; set; } = 0;
     }
 }

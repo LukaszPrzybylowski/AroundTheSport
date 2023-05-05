@@ -1,24 +1,45 @@
+<div class="row">
+    <div class="col-lg-6 d-none d-lg-block mt-5">
+        <div class="container" *ngIf="!!article">
 
+            <div class="d-flex justify-content-center">
+                <h1 class="display-4 mt-5 text-center">{{article.title}}</h1>
+            </div>
 
+            <div class="d-flex justify-content-center mt-4">
+                <h6>Written by {{this.user.username}} {{this.user.fullname}} - {{article.publishDate | date:'medium'}}
+                <span *ngIf="article.publishDate !== article.updateDate"> | Updated on {{article.updateDate | date:'medium'}}</span>
+                </h6>  
+            </div>
 
-<div class="container" *ngIf="!!article">
+            <div class="mt-4">
+                <img src="{{articlePhotoUrl}}" class="article-image img-fluid text-wrapper">
+                <p class="article-content">
+                    {{article.content}}
+                </p>
+            </div>
 
-    <div class="d-flex justify-content-center">
-        <h1 class="display-4 mt-5 text-center">{{article.title}}</h1>
+            <app-comment-system *ngIf="article" [articleId]="article.articleId"></app-comment-system>
+        </div>
     </div>
-
-    <div class="d-flex justify-content-center mt-4">
-        <h6>Written by {{article.username}} - {{article.publishDate | date:'medium'}}
-        <span *ngIf="article.publishDate !== article.updateDate"> | Updated on {{article.updateDate | date:'medium'}}</span>
-        </h6>  
+    <div class="col-lg-6 d-none d-lg-block mt-5">
+        <img *ngIf="!this.avatarImageUrl; else avatarImage" src="assets/img/EmptyAvatarImage.jpg"  alt="Avatar" class="avatar">
+        <ng-template #avatarImage>
+                <img src="{{avatarImageUrl}}" class="avatar" alt="Avatar">
+        </ng-template>
+        <div class="inLine1">
+            <h1>{{this.user.fullname}}</h1>
+            <h1 id="2">{{this.user.lastname}}</h1>
+        </div>
+        <div class="inLine2">
+            <h3 class="d-flex">Profession: </h3>
+            <h3 class="d-flex">{{this.user.profession}}</h3>
+        </div>
+        <div class="inLine2">
+            <h3 class="d-flex">Company: </h3>
+            <h3 class="d-flex">{{this.user.company}}</h3>
+        </div>
     </div>
-
-    <div class="mt-4">
-        <img src="{{articlePhotoUrl}}" class="article-image img-fluid text-wrapper">
-        <p class="article-content">
-            {{article.content}}
-        </p>
-    </div>
-
-    <app-comment-system *ngIf="article" [articleId]="article.articleId"></app-comment-system>
 </div>
+
+

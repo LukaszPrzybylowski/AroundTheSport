@@ -2,8 +2,24 @@
     <div class="row">
         <div class="col-lg-6 d-none d-lg-block mt-5">
             <div class="card">
-            <h1 class="d-flex">Your Account</h1>
-            <img src="/assets/img/EmptyAvatarImage.jpg" alt="Avatar" class="avatar">
+            <h1>Your Account</h1>
+            <label for="file">Add Avatar</label>
+                    <input 
+                        type="file"
+                        name="avatarFile"
+                        #avatarUploadElement
+                        (change)="onFileChange($event)" 
+                        class="form-control"
+                        required>
+
+                <button class="btn btn-primary" (click)="saveAvatar()" [disabled]="!avatarFile">
+                    Upload
+                </button>
+
+            <img *ngIf="!this.avatarImageUrl; else avatarImage" src="assets/img/EmptyAvatarImage.jpg"  alt="Avatar" class="avatar">
+            <ng-template #avatarImage>
+                    <img src="{{avatarImageUrl}}" class="avatar" alt="Avatar">
+            </ng-template>
             <div class="inLine1">
                 <h1>{{this.accountService.currentUserValue.fullname}}</h1>
                 <h1 id="2">{{this.accountService.currentUserValue.lastname}}</h1>
@@ -26,12 +42,13 @@
                 <div class="form-group mt-2">
                     <label>Fullname</label>
                     <input                       
-                        type="text"
                         [ngClass]="{'is-invalid' : hasErrors('fullname') && isTouched('fullname'),
                             'is-valid' : !hasErrors('fullname') && isTouched('fullname')}"
                         class="form-control form-control-lg"
                         formControlName="fullname"
-                        placeholder="{{this.accountService.currentUserValue.fullname}}">
+                        id="fullname"
+                        value="fullname"
+                        >
 
                     <div *ngIf="hasError('fullname', 'required')" class="invalid-feedback">
                         Full Name is required
@@ -49,8 +66,7 @@
                         [ngClass]="{'is-invalid' : hasErrors('lastname') && isTouched('lastname'),
                             'is-valid' : !hasErrors('lastname') && isTouched('lastname')}"
                         class="form-control form-control-lg"
-                        formControlName="lastname"
-                        placeholder="{{this.accountService.currentUserValue.lastname}}">
+                        formControlName="lastname">
 
                     <div *ngIf="hasError('lastname', 'minLenght') || hasError('lastname', 'maxLenght')" class="invalid-feedback">
                         Must be between 1-30 characters
@@ -64,9 +80,7 @@
                         [ngClass]="{'is-invalid' : hasErrors('company') && isTouched('company'),
                             'is-valid' : !hasErrors('company') && isTouched('company')}"
                         class="form-control form-control-lg"
-                        formControlName="company"
-                        placeholder="{{this.accountService.currentUserValue.company}}">
-
+                        formControlName="company">
                     <div *ngIf="hasError('company', 'minLenght') || hasError('company', 'maxLenght')" class="invalid-feedback">
                         Must be between 1-30 characters
                     </div>
@@ -79,8 +93,8 @@
                     formControlName="profession" 
                     class="form-control form-control-lg" 
                     required >
-                        <option selected >{{this.accountService.currentUserValue.profession}}</option>
-                        <option *ngFor="let profession of profession">{{profession}}</option>
+                        <option value >{{this.accountService.currentUserValue.profession}}</option>
+                        <option *ngFor="let profession of profession" [value]="profession">{{profession}}</option>
                     </select>         
                     <div *ngIf="hasError('profession', 'required')" class="invalid-feedback">
                         Profession is required

@@ -1,11 +1,12 @@
 <header id="home-section" class="mb-4">
     <div class="dark-overlay">
+        <video src="assets/img/background_video.mp4" autoplay muted loop playsinline class="back-video"></video>
         <div class="home-inner container">
             <div class="row" >
                 <div class="col-4"></div>
                 <div class="col-6 d-none d-lg-block" flex>
                     <video layout-fil loop="loop" autoplay="autoplay" preload="auto">
-                    <source src="/assets/img/Sport5.mp4" type="video/mp4"/>
+                    <source src="/assets/img/Logo_Video.webm    " type="video/webm"/>
                         </video>
                 </div>
                 <div class="col-2 d-lg-block">
@@ -27,64 +28,74 @@
             <div class="row">
             
                 <div class="col-lg-6 d-none d-lg-block mt-5">
+                    <div class="opacity">
+                        <h1 class="display-4 text-light">
+                            Start writing your <strong> first article</strong> and publish today <strong>!</strong>
+                        </h1>
 
-                    <h1 class="display-4 text-light">
-                        Start writing your <strong> first article</strong> and publish today <strong>!</strong>
-                    </h1>
+                        <h3 class="display-4 text-light">
+                            Join<strong> NOW </strong> and share your knowledge with others
+                        </h3>
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x text-light"></i>
+                            </div> 
 
-                    <h3 class="display-4 text-light">
-                         Join<strong> NOW </strong> and share your knowledge with others
-                    </h3>
-                    <div class="d-flex">
-                        <div class="p-4 align-self-start">
-                            <i class="fas fa-check fa-2x text-light"></i>
-                        </div> 
-
-                        <div class="p-4 align-self-end text-light">
-                            Simple registration will only take a few seconds to complete and login right away
+                            <div class="p-4 align-self-end text-light">
+                                Simple registration will only take a few seconds to complete and login right away
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex">
-                        <div class="p-4 align-self-start">
-                            <i class="fas fa-check fa-2x text-light"></i>
-                        </div> 
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x text-light"></i>
+                            </div> 
 
-                        <div class="p-4 align-self-end text-light">
-                            Start interacting with other authors and build connections as you publish more
+                            <div class="p-4 align-self-end text-light">
+                                Start interacting with other authors and build connections as you publish more
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex">
-                        <div class="p-4 align-self-start">
-                            <i class="fas fa-check fa-2x text-light"></i>
-                        </div> 
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x text-light"></i>
+                            </div> 
 
-                        <div class="p-4 align-self-end text-light">
-                            Get feature in our most discussed blogs section when your blog gets log of attention
+                            <div class="p-4 align-self-end text-light">
+                                Get feature in our most discussed blogs section when your blog gets log of attention
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div  class="col-lg-6 mt-5">
+                    <div *ngIf="!accountService.isLoggedIn(); else hello_window"></div>
+                        <div class="login-window">
+                            <app-login></app-login>
+                        </div>
+                    </div>
+                    <ng-template #hello_window>
                         <div class="card">
-                                <div *ngIf="!accountService.isLoggedIn(); else hello_window"></div>
-                                    <app-login></app-login>
-                                </div>
-                            <ng-template #hello_window>
-                                    <video autoplay muted loop>
-                                        <source src="/assets/img/Hello1.mp4" type="video/mp4"/>
-                                    </video>
-                                    <div class="card-content">
-                                        <h5 class="username">{{ accountService.currentUserValue.username }}</h5>
-                                    </div>
-                            </ng-template>
-                        </div>                     
+                            <video autoplay muted loop>
+                                <source src="/assets/img/Welcome_video.webm" type="video/webm"/>
+                            </video>
+                            <div class="card-content">
+                                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                                <style>
+                                    h5{ font-family: "Sofia", sans-serif;
+                                        color: #F3E09C;
+                                    }
+                                </style>
+                                <h5 class="username">{{ accountService.currentUserValue.username }}</h5>
+                            </div>
+                        </div>  
+                    </ng-template>                   
                 </div>         
         </div>
+        <div class="background-hide">
+            <app-famous-articles>The famous articles!</app-famous-articles>
+        </div>
+        <app-famous-forums>The famous discussion at forum!</app-famous-forums>
     </div>
-    <app-famous-articles>The famous articles!</app-famous-articles>
-    <app-famous-forums>The famous discussion at forum!</app-famous-forums>
-
 </header>
 

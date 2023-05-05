@@ -1,16 +1,23 @@
 .articles{
     min-height: calc(100vh - 400px);
 }
-#background{
+.background{
     max-width: 100% !important;
     min-height: 100vh;
-    background-color: black;
     background-image: url(/assets/img/LogoFrame.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-top: 1px solid  #F3E09C;
+    border-top: 1px solid  #F3E09C; 
+    z-index: -1;
 }
 .display-4{
     color: #F3E09C;
+}
+.overlay{
+    background: rgb(255, 255, 255, 0.2);
+    min-height: 100vh;
+}
+img{
+    margin-top: 20px;
 }

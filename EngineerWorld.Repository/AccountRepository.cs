@@ -56,7 +56,7 @@ namespace EngineerWorld.Repository
                 await connection.OpenAsync(cancellationToken);
 
                 await connection.ExecuteAsync("Account_Insert",
-                    new { Account = dataTable.AsTableValuedParameter("dbo.AccountType")},
+                    new { Account = dataTable.AsTableValuedParameter("dbo.AccountType") },
                     commandType: CommandType.StoredProcedure);
             }
 
@@ -79,6 +79,7 @@ namespace EngineerWorld.Repository
 
             return applicationUser;
         }
+
 
         public async Task<ApplicationUserUpdate> UpdateUserAsync(ApplicationUserUpdate applicationUserUpdate, int applicationUserId)
         {
@@ -105,8 +106,7 @@ namespace EngineerWorld.Repository
                         {
                             ApplicationUser = dataTable.AsTableValuedParameter("dbo.AccountTypeUpdate"),
                             ApplicationUserId = applicationUserId
-                        }, commandType: CommandType.StoredProcedure
-                        );
+                        }, commandType: CommandType.StoredProcedure);
                 }
             }
             catch (Exception ex)
@@ -114,9 +114,27 @@ namespace EngineerWorld.Repository
                 throw new Exception(ex.Message);
             }
 
-         
+
 
             return newApplicationUserUpdateDTO;
+
+        }
+
+        public async Task<ApplicationUserIdentity> GetApplicationUser(int applicationUserId)
+        {
+            ApplicationUserIdentity applicationUser;
+
+            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            {
+                await connection.OpenAsync();
+
+                applicationUser = await connection.QueryFirstOrDefaultAsync<ApplicationUserIdentity>(
+                    "Account_Get",
+                    new { ApplicationUserId = applicationUserId },
+                    commandType: CommandType.StoredProcedure);
+            }
+
+            return applicationUser;
 
         }
     }

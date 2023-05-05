@@ -17,5 +17,6 @@ namespace EngineerWorld.Model.Account
         public string Profession { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
+        public int AvatarId { get; set; }
     }
 }

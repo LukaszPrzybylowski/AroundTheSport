@@ -1,25 +1,40 @@
 .container{
     max-width: 100% !important;
     min-height: 100vh;
-    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+.overlay{
+    background: rgb(0, 0, 0, 0.2);
+    min-height: 100vh;
+    max-width: 100% !important;
+}
+.back-video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
 .btn{
     background-color:#F3E09C;
-    width: 600px;
+    max-width: 600px;
+    width: auto;
     margin-left: 50px;
 }
 .card{
-    min-width: 400px;
-    min-height: 600px;
-    background-color: white;
+    max-width: 400px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    background: rgb(0, 0, 0, 0);
     margin-left: 150px;
     position: absolute;
-    background-color: black;
-    margin-top: 100px;
-
+    margin-top: 140px;
+    border-color: rgb(0, 0, 0, 0);
 }
 .card img{
     width: 400px;
@@ -40,7 +55,7 @@
      line-height: 45px; 
      text-align: center; 
      text-shadow: 0 1px 1px #fff; 
-     padding-top: 20px; 
+     margin-top: 30px;
     }
 .form-group{
     max-width: 600px;

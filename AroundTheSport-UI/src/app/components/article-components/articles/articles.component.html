@@ -1,38 +1,39 @@
-<div class="container" id="background">
-    <div class="container">
-
-        <div class="d-flex justify-content-center">
-            <h1 class="display-4 mt-5">Articles</h1>
-        </div>
-    </div>
-
-    <ng-template [ngIf]="pagedArticleResult.items.length > 0" [ngIfElse]="noarticles">
-        <div class="container card-group mt-5 articles">
-            <app-article-card *ngFor="let article of pagedArticleResult.items" [article]="article"></app-article-card>
-        </div> 
-    </ng-template>
-
-    <ng-template #noarticles>
-        <div class="mt-4">
+<div class="background">
+    <div class="overlay">
+        <div class="container">
             <div class="d-flex justify-content-center">
-                <h3 class="display-4 mt-5">There are no articles published yet...</h3>
+                <img src="/assets/img/Articles.png">
             </div>
         </div>
-    </ng-template>
 
-    <div class="container mt-5" *ngIf="pagedArticleResult.totalCount > 0" id="pagination">
-        <div class="d-flex justify-content-center">
-            <pagination
-            [boundaryLinks]="true"
-            [maxSize]="10"
-            [itemsPerPage]="6"
-            previousText="&lsaquo;"
-            nextText="&rsaquo;"
-            firstText="&laquo;"
-            lastText="&raquo;"
-            [totalItems]="pagedArticleResult.totalCount"
-            (pageChanged)="pageChange($event)"
-            ></pagination>
+        <ng-template [ngIf]="pagedArticleResult.items.length > 0" [ngIfElse]="noarticles" class="articles">
+            <div class="container card-group mt-5 articles">
+                <app-article-card *ngFor="let article of pagedArticleResult.items" [article]="article"></app-article-card>
+            </div> 
+        </ng-template>
+
+        <ng-template #noarticles>
+            <div class="mt-4">
+                <div class="d-flex justify-content-center">
+                    <h3 class="display-4 mt-5">There are no articles published yet...</h3>
+                </div>
+            </div>
+        </ng-template>
+
+        <div class="container mt-5" *ngIf="pagedArticleResult.totalCount > 0" id="pagination">
+            <div class="d-flex justify-content-center">
+                <pagination
+                [boundaryLinks]="true"
+                [maxSize]="10"
+                [itemsPerPage]="6"
+                previousText="&lsaquo;"
+                nextText="&rsaquo;"
+                firstText="&laquo;"
+                lastText="&raquo;"
+                [totalItems]="pagedArticleResult.totalCount"
+                (pageChanged)="pageChange($event)"
+                ></pagination>
+            </div>
         </div>
     </div>
 </div>

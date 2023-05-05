@@ -20,5 +20,6 @@ namespace EngineerWorld.Model.Account
         public string Company { get; set; }
         public string Profession { get; set; }
         public string PasswordHash { get; set; }
+        public int AvatarId { get; set; }
     }
 }

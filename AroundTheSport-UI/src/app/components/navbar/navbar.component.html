@@ -44,6 +44,11 @@
 
             <div class="btn-group" dropdown *ngIf="accountService.isLoggedIn()">
 
+                <img *ngIf="!this.avatarImageUrl; else avatarImage" src="assets/img/EmptyAvatarImage.jpg"  alt="Avatar" class="avatar">
+                <ng-template #avatarImage>
+                        <img src="{{avatarImageUrl}}" class="avatar" alt="Avatar">
+                </ng-template>
+
                 <button 
                     id="button-animated"
                     dropdownToggle

@@ -85,6 +85,10 @@ export class AccountService {
 
   logout(){
     localStorage.removeItem('engineerWorld-currentUser');
-    this.currentUserSubject$.next(new ApplicationUser(null,null,null,null,null,null,null,null));
+    this.currentUserSubject$.next(new ApplicationUser(null,null,null,null,null,null,null,null,null));
+  }
+
+  getApplicationUser(aplicationUserId: number){
+    return this.http.get<ApplicationUser>(`${environment.webApi}/Account`);
   }
 }
